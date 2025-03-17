@@ -2,15 +2,17 @@
 import './App.css'
 
 function App() {
+  const Width = 960;
+  const Height = 500;
   
 
   return (
     <>
       <div className=''>
-      <svg width="960" height="500">
+      <svg width={Width} height={Height}>
         <circle 
-        cx="480" 
-        cy="250" 
+        cx={Width/2} 
+        cy={Height/2}
         fill="yellow" 
         stroke="black"
         stroke-width="5"
