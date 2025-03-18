@@ -1,9 +1,16 @@
 
 import './App.css'
+import * as d3 from "d3";
 
 function App() {
   const Width = 960;
   const Height = 500;
+  // Chain of function is called in order to create the svg calculations.
+  const Anarc = d3.arc()
+    .innerRadius(50)
+    .outerRadius(100)
+    .startAngle(0)
+    .endAngle(Math.PI * 2);
   
 
   return (
@@ -29,6 +36,9 @@ function App() {
         cy="150" 
         r="50">
         </circle>
+    {/* svg shapes are given by the D3 library we just need to call chain of function to invoke the calculation for svg */}
+    < path d={Anarc()}/>
+
     </svg>
       </div>
       <p className="read-the-docs">
